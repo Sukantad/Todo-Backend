@@ -13,6 +13,9 @@ app.use("/todo", TodoRoute);
 app.get("*", (req, res) => {
   res.send("Not found");
 });
+app.get("/",(req,res)=>{
+  res.send("Welcome my todo api")
+})
 DataBaseConnecton();
 app.listen(PORT, () => {
   try {
