@@ -10,12 +10,14 @@ const PORT = process.env.PORT || 3050;
 
 app.use("/todo", TodoRoute);
 
-app.get("*", (req, res) => {
-  res.send("Not found");
-});
 app.get("/",(req,res)=>{
   res.send("Welcome my todo api")
 })
+
+app.get("*", (req, res) => {
+  res.send("Not found");
+});
+
 DataBaseConnecton();
 app.listen(PORT, () => {
   try {
